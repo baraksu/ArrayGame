@@ -2,15 +2,23 @@
 .STACK 100h
 
 .DATA
-           
+    
+	; K has the number of elements in the original array (Here it is 15).
     k db 15d
+	
+	; Array1 has k-1 elements.
     array2 db 14d dup (?)
+	
+	; Array1 has k elements.
     array1 db 15d dup (?)
     
+	; Sum is used to calculate the sum of array2, which is needed to find the missing element.
     sum dw 0
-    
-    msg1 db 13,10,'The missing number is: ', '$'
-    msg2 db ', ', '$'
+	
+	; Those are the messages I print to the screen.
+    arrMsg db 'Here is Array2: ', '$'
+    eleMsg db ', ', '$'
+	endMsg db 13,10,'The missing number is: ', '$'
 
 .CODE
 
@@ -20,37 +28,63 @@ Start:
     mov ds, ax
     
     
-    ; The function accepts the array's offset and it's size, and fill its with the numbers: 1,2,3,4,5...k    
+    ; Here I push array1's offset (bx) and the size of array1 (cx) and call the function "SetArray1".  
     mov bx, offset array1   
     xor cx, cx  
     mov cl, k
-    
     push bx 
     push cx
     call SetArray1
+	
+	; Here is print the message "".
+	push ax
+	push dx
+	mov ah, 09h
+	lea dx, arrMsg
+	int 21h
+	pop dx
+    pop ax	
     
-    
+	
+	; Array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+	; Array2 = []
+	
+	
+	; Here is a short explanation about "setArray2". For more information go to README.
+	; The loop "setArray2" has 4 main parts:
+	
+	;	1. Chooses a random element between the first and the 15th element in array1.
+	;	2. Puts this number in the 14th place in array2.
+	;	3. Replaces the random number we have chosen in array1 with the 15th element of array1.
+	;   4. Prints the element we just added to array2 and adds it's value to sum.
+
+	; Continue to do it for the 14th and 13th and 12th elements...
+	
+	
 	mov cl, k
 	dec cl
-	
 	setArray2: 
-
+		
+		
+		
+		; Chooses a random number from array1.
 	    ranNum: 
-	        
-	        ; The function random: This procedure generates a random number between 0 and 15 (15 is k) and puts it's value inside dl. 
             call Random
 
-            ; This condition makes sure that the value wont be longer then the current array size.
+            ; This condition makes sure that the value is be greater then the current array size.
             cmp dx, cx
             jge ranNum
         
         
+		
         ; This moves the chosen random number into al and saves it's index at ah.
         mov bx, offset array1
         add bx, dx
         mov al, [bx]
         mov ah, bl
         
+		
+		
         ; This moves the last element of the array into the place we just took the number from.
         sub bx, dx  
         add bx, cx 
@@ -59,35 +93,46 @@ Start:
         mov bl, ah
         mov [bx], dl
         
-        ; This puts the taken random number and puts it in the last empty element of the second array.
+		
+		
+        ; This puts the taken random number and puts it in the last empty element of the array2.
         mov bx, offset array2
         add bx, cx
         sub bx, 1
         mov [bx], al
         
-        ; Prints the number so the user could see array 2
+		
+		
+        ; Prints the number we have moved into array2.
         mov ah, 0
         push ax
         call PrintNumber
         
+		
+    
+        ; Prints ", " (unless it is the last element).
         cmp cx, 1
         je dontP
-        
-        ; Prints ", "
         push ax
         push dx
         mov ah, 09h
-        lea dx, msg2
+        lea dx, eleMsg
         int 21h
         pop dx
         pop ax 
         
+		
+		
         dontP:
-            ; This adds the elemnt into SUM;
+            ; The last thing we do is to add the element we have moved into array2, into SUM;
             add [sum], ax
         
+		
+		
         loop setArray2
         
+		
+		
     ; This calculates the sum of array1 using the formula (2*1+(k-1))*0.5k
     mov cl, k
     inc cl
@@ -95,17 +140,25 @@ Start:
     mul cl
     shr ax, 1
         
+		
+		
     ; The difference between array1's sum and array2's sum is the missing number.
     sub ax, [sum] 
     
+	
+	
+	; Prints "The missing number is: ".
     push ax
     push dx
     mov ah, 09h
-    lea dx, msg1
+    lea dx, endMsg
     int 21h
     pop dx
     pop ax
     
+	
+	
+	; Prints the missing number. 
     push dx
     call PrintNumber
      
@@ -117,7 +170,12 @@ Exit:
     int 21h
     
     
-    
+
+
+; SetArray1:
+; Input: The offset of the array, and the size of the array.
+; Proccess: The procedure goes in every element of the array one by one and sets their values: 1,2,3,4..     
+; Output: Array1 will now be: { 1,2,3,4,5...k } 
 
 proc SetArray1
     
@@ -150,6 +208,12 @@ endp SetArray1
      
     
 
+
+; Random:
+; Input: No input.
+; Proccess: This procedure uses the function we have learnt to generate a random number between 0-15.      
+; Output: The register dl will hold a random value between 0-15.
+
 proc Random
     
     push ax 
@@ -169,6 +233,13 @@ endp Random
        
        
 
+
+; PrintNumber:
+; Input: A two digit decimal value.
+; Proccess: The procedure compares the number to 10. If it is lower then 10 (0-9) it prints the digit.
+;			If it is higher or equal two 10, the procedure prints "1" and then subtract 10 from it and prints the digit.
+; Output: The value of the input number is printed to the screen.
+
 proc PrintNumber
     
     push dx
@@ -180,11 +251,9 @@ proc PrintNumber
     
     mov dx, [bp+10]
     
-    ; If the number is bigger the 9 we can not print it as a number.
     cmp dx, 10
     jl oneDigit
     
-    ; We will print "1" and then the second digit of the number. So if we wanna print 16 we will print 1 and then 6.
     twoDigit:
         mov bx, 1
         push bx
@@ -205,7 +274,13 @@ proc PrintNumber
 endp PrintNumber
 
         
-        
+    
+
+; PrintNumber:
+; Input: A decimal value between 0-9.
+; Proccess: The procedure adds 30h to the digit and prints the ascii digit of the new value.
+; Output: The input digit will be printed to the screen (Instead of the ascii character that has it's value).
+    
 proc PrintDigit
     
     push dx
