@@ -264,8 +264,7 @@ endp Random
 
 ; PrintNumber:
 ; Input: A two digit decimal value.
-; Proccess: The procedure compares the number to 10. If it is lower then 10 (0-9) it prints the digit.
-;			If it is higher or equal two 10, the procedure prints "1" and then subtract 10 from it and prints the digit.
+; Proccess: The procedure compares the number to 10. If it is lower then 10 (0-9) it prints the digit. If it is higher or equal two 10, the procedure prints "1" and then subtract 10 from it and prints the digit.
 ; Output: The value of the input number is printed to the screen.
 
 proc PrintNumber
@@ -336,7 +335,7 @@ endp PrintDigit
       
 ; IsPrime:
 ; Input: A decimal number.
-; Proccess: The procedure loops throguh every integer that is smaller then the number and check if the number is divisble by it. If it is - it is not prime.     
+; Proccess: The procedure loops throguh every integer that is smaller then the number and check if the number is divisble by it. If it is - it is not prime.  If the procedure goed through all the numbers except "1" and none of them were divisble - it is a prime.
 ; Output: "And it is a prime number!" if it is prime and "And it is a composite number!e" if it is not.  
 
 proc IsPrime
