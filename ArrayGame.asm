@@ -336,7 +336,7 @@ endp PrintDigit
 ; IsPrime:
 ; Input: A decimal number.
 ; Proccess: The procedure loops throguh every integer that is smaller then the number and check if the number is divisble by it. If it is - it is not prime.  If the procedure goed through all the numbers except "1" and none of them were divisble - it is a prime.
-; Output: "And it is a prime number!" if it is prime and "And it is a composite number!e" if it is not.  
+; Output: Prints "And it is a prime number!" if it is prime or "And it is a composite number!" if it is not.  
 
 proc IsPrime
     
