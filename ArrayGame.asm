@@ -304,7 +304,7 @@ endp PrintNumber
         
     
 
-; PrintNumber:
+; PrintDigit:
 ; Input: A decimal value between 0-9.
 ; Proccess: The procedure adds 30h to the digit and prints the ascii digit of the new value.
 ; Output: The input digit will be printed to the screen (Instead of the ascii character that has it's value).
