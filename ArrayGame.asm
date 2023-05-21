@@ -4,35 +4,44 @@
 .DATA
     
 	
+	
 	; K has the number of elements in the original array (Here it is 15).
-    k db 15d
-	
+	k db 15d
+
 	; Array1 has k-1 elements.
-    array2 db 14d dup (?)
-	
+	array2 db 14d dup (?)
+
 	; Array1 has k elements.
-    array1 db 15d dup (?)
-    
-	; Sum is used to calculate the sum of array2, which is needed to find the missing element.
-    sum dw 0
+	array1 db 15d dup (?)
 	
+	; Sum is used to calculate the sum of array2, which is needed to find the missing element.
+	sum dw 0
+	
+
+
 	; Those are the messages I print to the screen.
-    arrMsg db 'Here is Array2: ', '$'
-    eleMsg db ', ', '$'
+	arrMsg db 'Here is Array2: ', '$'
+	eleMsg db ', ', '$'
 	endMsg db 13,10,'The missing number is: ', '$'
 	 
+	 
+	 
 	; Those are the messages I print to the screen.	
-    primeMsg db 13,10,'And it is a prime number!', '$'
+	primeMsg db 13,10,'And it is a prime number!', '$'
 	compMsg db 13,10,'And it is a composite number!', '$'  
+
 
 
 .CODE
 
+
 Start:
+
 
     mov ax, @data
     mov ds, ax
     
+	
     
     ; Here I push array1's offset (bx) and the size of array1 (cx) and call the function "SetArray1".  
     mov bx, offset array1   
@@ -41,6 +50,8 @@ Start:
     push bx 
     push cx
     call SetArray1
+	
+	
 	
 	; Here is print the message "".
 	push ax
@@ -51,6 +62,7 @@ Start:
 	pop dx
     pop ax	
     
+	
 	
 	; Array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 	; Array2 = []
@@ -65,6 +77,7 @@ Start:
 	;   4. Prints the element we just added to array2 and adds it's value to sum.
 
 	; Continue to do it for the 14th and 13th and 12th elements...
+	
 	
 	
 	mov cl, k
@@ -368,15 +381,15 @@ proc IsPrime
     
     
     endPrime:
-        pop bp
-        pop ax
-        pop cx
-        pop dx 
-             
-             
-             
+		pop bp
+		pop ax
+		pop cx
+		pop dx 
+
+
+
     
-    ret 2      
+	ret 2      
     
 endp IsPrime	
 
