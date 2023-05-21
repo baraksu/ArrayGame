@@ -1,3 +1,7 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Made by © Yehonatan Gurfinkel
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
 .MODEL small
 .STACK 100h
 
@@ -59,7 +63,7 @@ Start:
 	lea dx, arrMsg
 	int 21h
 	pop dx
-    pop ax	
+    	pop ax	
     
 	
 	
@@ -70,10 +74,12 @@ Start:
 	; Here is a short explanation about "setArray2". For more information go to README.
 	; The loop "setArray2" has 4 main parts:
 	
+	
 	;	1. Chooses a random element between the first and the 15th element in array1.
 	;	2. Puts this number in the 14th place in array2.
 	;	3. Replaces the random number we have chosen in array1 with the 15th element of array1.
-	;   4. Prints the element we just added to array2 and adds it's value to sum.
+	;   	4. Prints the element we just added to array2 and adds it's value to sum.
+
 
 	; Continue to do it for the 14th and 13th and 12th elements...
 	
@@ -84,8 +90,7 @@ Start:
 	setArray2: 
 		
 		
-		
-		; Chooses a random number from array1.
+	    ; Chooses a random number from array1.
 	    ranNum: 
             call Random
 
@@ -165,7 +170,7 @@ Start:
     
 	
 	
-	; Prints "The missing number is: ".
+    ; Prints "The missing number is: ".
     push ax
     push dx
     mov ah, 09h
@@ -176,13 +181,13 @@ Start:
     
 	
 	
-	; Prints the missing number. 
+    ; Prints the missing number. 
     push dx
     call PrintNumber
 	
 	
-	; Check if it is prime.
-	push dx
+    ; Check if it is prime.
+    push dx
     call IsPrime
      
      
@@ -380,13 +385,11 @@ proc IsPrime
     
     
     endPrime:
-		pop bp
-		pop ax
-		pop cx
-		pop dx 
+	pop bp
+	pop ax
+	pop cx
+	pop dx 
 
-
-    
 	ret 2      
     
 endp IsPrime	
