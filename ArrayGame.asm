@@ -11,7 +11,7 @@
 	; K has the number of elements in the original array (Here it is 15).
 	k db 15d
 
-	; Array1 has k-1 elements.
+	; Array2 has k-1 elements.
 	array2 db 14d dup (?)
 
 	; Array1 has k elements.
