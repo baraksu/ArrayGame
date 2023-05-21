@@ -2,7 +2,6 @@
 .STACK 100h
 
 .DATA
-    
 	
 	
 	; K has the number of elements in the original array (Here it is 15).
@@ -385,7 +384,6 @@ proc IsPrime
 		pop ax
 		pop cx
 		pop dx 
-
 
 
     
