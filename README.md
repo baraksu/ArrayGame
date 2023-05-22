@@ -58,19 +58,18 @@ Here is Array2:
   
 8. Once it finish, it will shorten Array1 by one element and repeat steps 1-8 until only one element remains in Array1.  
   
-    
+⠀
   
 > **Note:** I'm not actually shortening the array. Instead, I simply decrease by one the register that holds the length of the array, effectively ignoring all elements beyond the boundary.  
-
+⠀
   
-  ⠀
 After the program finishes with Array2, it calculates the sum of Array1 using the formula for an arithmetic sequence with a first element of 1 and a common difference of 1, where the number of elements is k:  
   
 ```
 ( 2 * 1 + (k - 1) ) * 0.5k = ( ( k + 1 ) * k ) / 0.5
-```
-  
-  
+```  
+⠀
+   
 Then the program subtracts the value of the variable "sum" from the calculated sum. The difference is the missing element, which the program prints.  
   
 ```sh
