@@ -240,8 +240,14 @@ Here are all the variables in the code, their names, their values, and their goa
 | endMsg | 13,10,'The missing number is: ', '$' | The message displaying the missing number. |
 | primeMsg | 13,10,'And it is a prime number!', '$' | A message if the number is prime.|
 | compMsg | 13,10,'And it is a composite number!', '$'   | A Message if the number is composite. |
+
+
 ⠀
+⠀    
+  
 ⠀
+ 
+ 
 ## Procedures
 Here are all the procedures in the code, their parameters, their processes, and their return values:
 
@@ -250,21 +256,38 @@ Here are all the procedures in the code, their parameters, their processes, and 
 * **Proccess:** The procedure goes in every element of the array one by one and sets their values: 1,2,3,4..     
 * **Output:** Array1 will now be: { 1,2,3,4,5...k }
 
+  
+⠀
+   
+
 ### Random
 * **Input:** No input.
 * **Proccess:** This procedure uses the function we have learnt to generate a random number between 0-15.        
 * **Output:** The register dl will hold a random value between 0-15.
+
+  
+⠀
+   
 
 ### PrintNumber
 * **Input:** A two digit decimal value.
 * **Proccess:** The procedure compares the number to 10. If it is lower then 10 (0-9) it prints the digit. If it is higher or equal two 10, the procedure prints "1" and then subtract 10 from it and prints the digit.
 * **Output:** The value of the input number is printed to the screen.
 
+  
+⠀
+   
+
 ### IsPrime:
 * **Input:** A decimal number.
 * **Proccess:** The procedure loops throguh every integer that is smaller then the number and check if the number is divisble by it. If it is - it is not prime. If the procedure goed through all the numbers except "1" and none of them were divisble - it is a prime.    
 * **Output:** Prints "And it is a prime number!" if it is prime or "And it is a composite number!" if it is not.  
+
+  
 ⠀
+   
+
+   
 ⠀
 ## Run images
 
