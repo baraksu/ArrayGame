@@ -5,9 +5,8 @@
 ⠀
 * Yeshivat bnei akiva givat shmuel, 10th Grade **(י'2)**.⠀
 * **Teacher**: My amazing teacher Barak suberri.⠀
-* **Year of submission**: 2023.
+* **Year of submission**: 2023.  
 ⠀
-
 >The purpose of the program is to find the missing number from a list of numbers.
 >The program removes a random element from an array with k elements and then finds it.
 >Afterwards, the program displays to the user whether the missing number is prime or composite.
