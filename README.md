@@ -486,6 +486,7 @@ And finally, here is an image that shows an example run for a different value of
   
 באופן כללי נהניתי מהפרוייקט. אומנם יש לי הרבה נסיון בתכנות של פרוייקטים גדולים: מאלגוריתמים מסובכים בפייתון, תכנות בוטים לווטסאפ בJavascript ועד [אפליקציית אנדרואיד שלמה בשפת Java](https://play.google.com/store/apps/details?id=com.gurfi.GradeApp&hl=he&gl=US) הנמצאת בשימוש בשכבה כבר מעל לשנה, אבל מעולם לא היה לי נסיון בשפת האסמבלי והפרוייקט נתן לי הזדמנות להתעמק באלגוריתם מעניין גם בשפה הנמוכה הזו שאותה אני פחות מכיר.        
     
+
 ----
     
   
