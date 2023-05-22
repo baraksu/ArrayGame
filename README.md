@@ -22,11 +22,15 @@ In the code I have provided, k=15, but in reality, the code works for any natura
 The first thing the code does is to define the Array1.  
   
 The array will look like this:
+
 ⠀
 |⠀ 1 ⠀|⠀ 2 ⠀| ⠀3 ⠀ |⠀4⠀|⠀5⠀|⠀...⠀|⠀k⠀|
-| - | - | - | - | - | - | - |   
+| - | - | - | - | - | - | - | 
+
+
+
 ⠀
-    
+
 After Array1 is definded, it will print the message:
 ```
 Here is Array2: 
@@ -84,8 +88,10 @@ Next, the program checks whether the result is prime or composite and prints the
 More details about the printing functions and the function that checks if a number is prime can be found below.  
 ⠀
 ⠀
-## Run example
+## Run example  
+  
 ⠀
+   
 Here is an example of the algorithm for **k = 4**:
 
 | Array1: |⠀⠀⠀|⠀⠀⠀|⠀⠀⠀|⠀⠀⠀|
