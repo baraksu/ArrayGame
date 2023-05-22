@@ -1,7 +1,7 @@
 **This readme is not yet finished**
 
 # Assembly Project - `Array Game`
-## By [Yehonatan Gurfinkel](https://github.com/yehogdev)
+## By [Yehonatan Gurfinkel](https://github.com/yehogdev)  -  יהונתן גורפינקל
 ⠀
 * Yeshivat bnei akiva givat shmuel, 10th Grade **(י'2)**.⠀
 * **Teacher**: My amazing teacher Barak suberri.⠀
@@ -16,7 +16,7 @@
   
 ⠀
    
-## How does the algorithm work?  
+## `How does the algorithm work? ` 
 ⠀
    
 At first, the program, creates an array called Array1 with a length of k elements and an array called Array2 with a length of k-1 elements.  
@@ -96,7 +96,7 @@ More details about the printing functions and the function that checks if a numb
   
 ⠀
    
-## Run example  
+## `Run example`  
   
 ⠀
    
@@ -217,7 +217,7 @@ And it is a prime number!
   
 ⠀
    
-##### click here to jump into run images.
+##### [click here](#run-images) to jump into run images.
 
 ⠀
 ⠀    
@@ -225,7 +225,7 @@ And it is a prime number!
 ⠀
  
  
-## Variables
+## `Variables`
 
 Here are all the variables in the code, their names, their values, and their goal in the code:
 
@@ -248,7 +248,7 @@ Here are all the variables in the code, their names, their values, and their goa
 ⠀
  
  
-## Procedures
+## `Procedures`
 
 
 Here are all the procedures in the code, their parameters, their processes, and their return values:
@@ -295,7 +295,7 @@ Here are all the procedures in the code, their parameters, their processes, and 
 
    
 ⠀
-## Run images  
+## `Run images`  
 
   
 ⠀
@@ -380,7 +380,7 @@ And finally, here is an image that shows an example run for a different value of
    
 
    
-⠀## Personal experience
+## `Personal experience`
 
   
 ⠀
@@ -448,3 +448,5 @@ And finally, here is an image that shows an example run for a different value of
     
 דבר נוסף שהייתי רוצה להוסיף לתוכנית בעתיד הוא תמיכה בערכי k גדולים מ19. בשביל זה יהיה צורך להשתמש בפונקצייה שמגרילה מספרים גדולים יותר, להוסיף תמיכה בהדפסה של מספרים שאינם בטווח 1-19 ואולי אפילו התאמת הקוד לאלמנטים במערך שערכם עולה על 8 סיביות ולכן אי אפשר לשמור אותם ברגיסטר כמו al. החיסרון של אלגוריתם כזה הוא שהוא יהיה הרבה יותר איטי.
 
+
+באופן כללי נהניתי מהפרוייקט. אומנם יש לי הרבה נסיון בתכנות של פרוייקטים גדולים: מאלגוריתמים מסובכים בפייתון, תכנות בוטים לווטסאפ בjavascript ועד [אפליקציית אנדרואיד שלמה בשפת java](https://github.com/bard/my-project/blob/master/README.md) הנמצאת בשימוש בשכבה כבר מעל לשנה, אבל מעולם לא היה לי נסיון בשפת האסמבלי ופרוייקט נתן לי הזדמנות להתעמק באלגוריתם מעניין גם בשפה הנמוכה הזו שאותה אני פחות מכיר.
