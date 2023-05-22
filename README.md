@@ -491,10 +491,10 @@ And finally, here is an image that shows an example run for a different value of
 ----
   
   
-Ⓒ  Yehonatan Gurfinkel - יהונתן גורפינקל
-School: ישיבת בני עקיבא גבעת שמואל, כיתה י'2
-Github account: [YG](https://github.com/yehogdev)
-Assembly project "Array Game"
-Language: Assembly x86
+Ⓒ  Yehonatan Gurfinkel -   יהונתן גורפינקל
+School:   ישיבת בני עקיבא גבעת שמואל, כיתה י'2
+Github account: [YG](https://github.com/yehogdev)  
+Assembly project "Array Game"  
+Language: Assembly x86  
 
 ----
