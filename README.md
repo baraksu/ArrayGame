@@ -12,6 +12,7 @@
 >Afterwards, the program displays to the user whether the missing number is prime or composite.
 
 ⠀
+⠀    
   
 ⠀
    
@@ -89,8 +90,9 @@ The missing number is:
   
 Next, the program checks whether the result is prime or composite and prints the conclusion.  
 More details about the printing functions and the function that checks if a number is prime can be found below.  
+
 ⠀
-⠀
+⠀    
   
 ⠀
    
@@ -217,10 +219,12 @@ And it is a prime number!
    
 ##### click here to jump into run images.
 
+⠀
+⠀    
   
 ⠀
-   
-
+ 
+ 
 ## Variables
 
 Here are all the variables in the code, their names, their values, and their goal in the code:
