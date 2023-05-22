@@ -1,5 +1,3 @@
-**This readme is not yet finished**
-
 # Assembly Project - `Array Game`
 ## By [Yehonatan Gurfinkel](https://github.com/yehogdev)  -  יהונתן גורפינקל
 ⠀
@@ -43,7 +41,7 @@
 ## `How does the algorithm work? ` 
 ⠀
    
-At first, the program, creates an array called Array1 with a length of k elements and an array called Array2 with a length of k-1 elements.  
+At first, the program creates an array called Array1 with a length of k elements and an array called Array2 with a length of k-1 elements.  
 
 In the code I have provided, k=15, but in reality, the code works for any natural number where 1 < k < 20.  
   
@@ -202,7 +200,7 @@ Now it copies the last element of Array1 and replaces the chosen number (4) with
 
 Now it puts the chosen random element (4) at the last empty element of Array2:
 
-| Array1: |⠀4⠀|⠀2⠀|⠀⠀⠀|⠀ ⠀⠀
+| Array1: |⠀2⠀|⠀2⠀|⠀⠀⠀|⠀ ⠀⠀
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** |4 | 1|3|
 
@@ -220,12 +218,12 @@ Now it prints "4" and adds 4 to sum (now "sum" = 8). Then it shortens Array1 by 
 ⠀
    
 
-Now it calculates the sum of Array1:
+Now it calculates the sum of Array1 (using the formula mentioned above):
 ```
 1 + 2 + 3 + 4 = 10
 ```
 
-The missing number is 10-sum which is:
+The missing number is 10 minus sum which is:
 ```
 10 - 8 = 2
 ```
@@ -242,7 +240,7 @@ And it is a prime number!
   
 ⠀
    
-##### [click here](#run-images) to jump into run images.
+##### [click here](#run-images-1) to jump into run images.
 
 ⠀
 ⠀    
@@ -310,6 +308,14 @@ Here are all the procedures in the code, their parameters, their processes, and 
   
 ⠀
    
+### PrintDigit
+* **Input:** A decimal value between 0-9.
+* **Proccess:** The procedure adds 30h to the digit and prints the ascii digit of the new value.
+* **Output:** The input digit will be printed to the screen (Instead of the ascii character that has it's value). 
+
+  
+⠀
+   
 
 ### IsPrime:
 * **Input:** A decimal number.
@@ -330,62 +336,62 @@ Here are all the procedures in the code, their parameters, their processes, and 
    
 Here is an image that shows the vars k, sum and the arrays 1 and 2 **before running** the code.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/BeforeRun.png)
+![Before Run](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/BeforeRun.png)
 
   
 ⠀
    
 Here is an image that shows Array1 after putting it's values.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterSettingArray1.PNG)
+![After Setting Array1](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterSettingArray1.PNG)
 
   
 ⠀
    
-Here is an image that shows Array1 and Array2 **after the first number**.
+Here is an image that shows Array1 and Array2 **after the first number** is being added.  
 Notice how the value "6" in Array1 turned into "15".
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/GeneratingFirstNumber.PNG)
+![Generating First Number](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/GeneratingFirstNumber.PNG)
 
   
 ⠀
    
-Here is an image that shows the output in the **middle of the run**.
-The code haven't't finished so this is not the full Array2.
+Here is an image that shows the output in the **middle of the run**.  
+The code hasn't finished so this is not the full Array2.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/MidRunOutputCapture.PNG)
+![Mid Run Output Capture](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/MidRunOutputCapture.PNG)
 
   
 ⠀
    
-Here is an image that shows sum, Array1 and Array2 in the **middle of the run**.
-The value of sum doesn't include the last added number, 9, before the capture was taken before 9 was added to sum.
+Here is an image that shows sum, Array1 and Array2 in the **middle of the run**.  
+The value of sum doesn't include the last added number, 9, because the capture was taken before 9 was added to sum.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/MidRunCapture.PNG)
+![Mid Run Capture](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/MidRunCapture.PNG)
 
   
 ⠀
    
 Here is an image that shows sum and the two arrays **after the program is done**.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRun.PNG)
+![After Run](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRun.PNG)
 
   
 ⠀
    
 Here is an image that shows the output **before the prime check**.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRunOutput1.PNG)
+![After Run Output1](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRunOutput1.PNG)
 
 
   
 ⠀
    
-Here is an image that shows the program checking if the number is prime or not.
-The number is at dl, and the capture was taken right after the line "div cl".
-The reminder is stored at AH and the quotient at AL.
+Here is an image that shows the program checking if the number is prime or not.  
+The number is at dl, and the capture was taken right **after the line** "div cl".  
+The reminder has been stored at AH and the quotient at AL.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/PrimeCheck.PNG)
+![Prime Check](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/PrimeCheck.PNG)
 
 
   
@@ -393,7 +399,7 @@ The reminder is stored at AH and the quotient at AL.
    
 Here is an image that shows the final output - **after the program is all finished**.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRunOutput2.PNG)
+![After Run Output2](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRunOutput2.PNG)
 
 
   
@@ -401,7 +407,7 @@ Here is an image that shows the final output - **after the program is all finish
    
 And finally, here is an image that shows an example run for a different value of k. Here **k = 7**.
 
-![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/DifferentKRunExample.PNG)
+![Different K Run Example](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/DifferentKRunExample.PNG)
 
   
 ⠀
@@ -478,4 +484,17 @@ And finally, here is an image that shows an example run for a different value of
 דבר נוסף שהייתי רוצה להוסיף לתוכנית בעתיד הוא תמיכה בערכי k גדולים מ19. בשביל זה יהיה צורך להשתמש בפונקצייה שמגרילה מספרים גדולים יותר, להוסיף תמיכה בהדפסה של מספרים שאינם בטווח 1-19 ואולי אפילו התאמת הקוד לאלמנטים במערך שערכם עולה על 8 סיביות ולכן אי אפשר לשמור אותם ברגיסטר כמו al. החיסרון של אלגוריתם כזה הוא שהוא יהיה הרבה יותר איטי.
 
   
-באופן כללי נהניתי מהפרוייקט. אומנם יש לי הרבה נסיון בתכנות של פרוייקטים גדולים: מאלגוריתמים מסובכים בפייתון, תכנות בוטים לווטסאפ בjavascript ועד [אפליקציית אנדרואיד שלמה בשפת java](https://play.google.com/store/apps/details?id=com.gurfi.GradeApp&hl=he&gl=US) הנמצאת בשימוש בשכבה כבר מעל לשנה, אבל מעולם לא היה לי נסיון בשפת האסמבלי והפרוייקט נתן לי הזדמנות להתעמק באלגוריתם מעניין גם בשפה הנמוכה הזו שאותה אני פחות מכיר.
+באופן כללי נהניתי מהפרוייקט. אומנם יש לי הרבה נסיון בתכנות של פרוייקטים גדולים: מאלגוריתמים מסובכים בפייתון, תכנות בוטים לווטסאפ בjavascript ועד [אפליקציית אנדרואיד שלמה בשפת java](https://play.google.com/store/apps/details?id=com.gurfi.GradeApp&hl=he&gl=US) הנמצאת בשימוש בשכבה כבר מעל לשנה, אבל מעולם לא היה לי נסיון בשפת האסמבלי והפרוייקט נתן לי הזדמנות להתעמק באלגוריתם מעניין גם בשפה הנמוכה הזו שאותה אני פחות מכיר. 
+  
+  
+  
+----
+  
+  
+Ⓒ  Yehonatan Gurfinkel - יהונתן גורפינקל
+School: ישיבת בני עקיבא גבעת שמואל, כיתה י'2
+Github account: [YG](https://github.com/yehogdev)
+Assembly project "Array Game"
+Language: Assembly x86
+
+----
