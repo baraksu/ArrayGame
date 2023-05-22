@@ -295,5 +295,83 @@ Here are all the procedures in the code, their parameters, their processes, and 
 
    
 ⠀
-## Run images
+## Run images  
+
+  
+⠀
+   
+Here is an image that shows the vars k, sum and the arrays 1 and 2 **before running** the code.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/BeforeRun.png)
+
+  
+⠀
+   
+Here is an image that shows Array1 after putting it's values.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterSettingArray1.PNG)
+
+  
+⠀
+   
+Here is an image that shows Array1 and Array2 **after the first number**.
+Notice how the value "6" in Array1 turned into "15".
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/GeneratingFirstNumber.PNG)
+
+  
+⠀
+   
+Here is an image that shows the output in the **middle of the run**.
+The code haven't't finished so this is not the full Array2.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/MidRunOutputCapture.PNG)
+
+  
+⠀
+   
+Here is an image that shows sum, Array1 and Array2 in the **middle of the run**.
+The value of sum doesn't include the last added number, 9, before the capture was taken before 9 was added to sum.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/MidRunCapture.PNG)
+
+  
+⠀
+   
+Here is an image that shows sum and the two arrays **after the program is done**.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRun.PNG)
+
+  
+⠀
+   
+Here is an image that shows the output **before the prime check**.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRunOutput1.PNG)
+
+
+  
+⠀
+   
+Here is an image that shows the program checking if the number is prime or not.
+The number is at dl, and the capture was taken right after the line "div cl".
+The reminder is stored at AH and the quotient at AL.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/PrimeCheck.PNG)
+
+
+  
+⠀
+   
+Here is an image that shows the final output - **after the program is all finished**.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/AfterRunOutput2.PNG)
+
+
+  
+⠀
+   
+And finally, here is an image that shows an example run for a different value of k. Here **k = 7**.
+
+![alt text](https://raw.githubusercontent.com/baraksu/ArrayGame/main/Run%20images/DifferentKRunExample.PNG)
 
