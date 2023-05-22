@@ -12,6 +12,9 @@
 >Afterwards, the program displays to the user whether the missing number is prime or composite.
 
 ⠀
+  
+⠀
+   
 ## How does the algorithm work?  
 ⠀
    
@@ -88,6 +91,9 @@ Next, the program checks whether the result is prime or composite and prints the
 More details about the printing functions and the function that checks if a number is prime can be found below.  
 ⠀
 ⠀
+  
+⠀
+   
 ## Run example  
   
 ⠀
@@ -98,11 +104,19 @@ Here is an example of the algorithm for **k = 4**:
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** |⠀  ⠀|⠀ ⠀| ⠀
 
+  
+⠀
+   
+
 The first thing the algorithm does is to set Array1:
 
 | Array1: |⠀1⠀|⠀2⠀|⠀3⠀|⠀4⠀|
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** |⠀  ⠀|⠀ ⠀| ⠀
+
+  
+⠀
+   
 
 Then it chooses a random number from Array1. The chosen number is 3.
 Now it copies the last element of Array1 and replaces the chosen number (3) with this element:
@@ -111,11 +125,19 @@ Now it copies the last element of Array1 and replaces the chosen number (3) with
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** |⠀  ⠀|⠀ ⠀| ⠀
 
+  
+⠀
+   
+
 Now it puts the chosen random element (3) at the last empty element of Array2:
 
 | Array1: |⠀1⠀|⠀2⠀|⠀4⠀|⠀4⠀|
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** | | | 3|
+
+  
+⠀
+   
 
 Now it prints "3" and adds 3 to sum (now "sum" = 3). Then it shortens Array1 by 1 element.
 Then it chooses a random number from Array1. The chosen number is 1.
@@ -125,11 +147,19 @@ Now it copies the last element of Array1 and replaces the chosen number (1) with
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** | | | 3|
 
+  
+⠀
+   
+
 Now it puts the chosen random element (1) at the last empty element of Array2:
 
 | Array1: |⠀4⠀|⠀2⠀|⠀4⠀| ⠀⠀⠀|
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** | | 1|3 |
+
+  
+⠀
+   
 
 Now it prints "1" and adds 1 to sum (now "sum" = 4). Then it shortens Array1 by 1 element.
 Then it chooses a random number from Array1. The chosen number is 4.
@@ -139,17 +169,29 @@ Now it copies the last element of Array1 and replaces the chosen number (4) with
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** | | 1|3 |
 
+  
+⠀
+   
+
 Now it puts the chosen random element (4) at the last empty element of Array2:
 
 | Array1: |⠀4⠀|⠀2⠀|⠀⠀⠀|⠀ ⠀⠀
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** |4 | 1|3|
 
+  
+⠀
+   
+
 Now it prints "4" and adds 4 to sum (now "sum" = 8). Then it shortens Array1 by 1 element.
 
 | Array1: |⠀2⠀|⠀⠀⠀|⠀⠀⠀| ⠀⠀⠀|   
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Array2:** |4 | 1|3 |
+
+  
+⠀
+   
 
 Now it calculates the sum of Array1:
 ```
@@ -170,10 +212,15 @@ Last thing we do is to loop all the natural numbers that are lower then the miss
 ```
 And it is a prime number!
 ```
-
+  
+⠀
+   
 ##### click here to jump into run images.
+
+  
 ⠀
-⠀
+   
+
 ## Variables
 
 Here are all the variables in the code, their names, their values, and their goal in the code:
