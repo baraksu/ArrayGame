@@ -12,27 +12,33 @@
 >Afterwards, the program displays to the user whether the missing number is prime or composite.
 
 ⠀
+⠀
+⠀    
+  
 ⠀    
   
 ## Table of Contents
 
-* ##### [Start](#top)
+* ##### [Start](#assembly-project---array-game)
    
-* #####  [How does the algorithm work?](#How-does-the-algorithm-work?)
+* #####  [How does the algorithm work?](#how-does-the-algorithm-work-)
     
-* #####  [Run example](#Run-example)
+* #####  [Run example](#run-example-1)
    
-* #####  [Variables](#Variables)
+* #####  [Variables](#variables-1)
    
-* #####  [Procedures](#Procedures)
+* #####  [Procedures](#procedures-1)
    
-* #####  [Run images](#Run-images)
+* #####  [Run images](#run-images-1)
    
-* #####  [Personal experience](#Personal-experience)
+* #####  [Personal experience](run-images-1)
    
 * #####  [End](#bottom)
 
 ⠀
+⠀    
+  
+  ⠀
 ⠀    
   
 ## `How does the algorithm work? ` 
