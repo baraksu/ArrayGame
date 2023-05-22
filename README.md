@@ -12,57 +12,57 @@
 >Afterwards, the program displays to the user whether the missing number is prime or composite.
 
 ⠀
-## How does the algorithm work?
-
-At first, the program, creates an array called Array1 with a length of k elements and an array called Array2 with a length of k-1 elements.
-In the code I have provided, k=15, but in reality, the code works for any natural number where 1 < k < 20.
+## How does the algorithm work?  
+  
+At first, the program, creates an array called Array1 with a length of k elements and an array called Array2 with a length of k-1 elements.  
+In the code I have provided, k=15, but in reality, the code works for any natural number where 1 < k < 20.  
 The first thing the code does is to define the Array1. The array will look like this:
 ⠀
 |⠀ 1 ⠀|⠀ 2 ⠀| ⠀3 ⠀ |⠀4⠀|⠀5⠀|⠀...⠀|⠀k⠀|
-| - | - | - | - | - | - | - |
-
+| - | - | - | - | - | - | - |  
+  
 After Array1 is definded, it will print the message:
-```diff
+```
 Here is Array2: 
 ```
 
 ⠀
-#### Afterwards, the program will perform the following steps:
-
-1. It will generate a random number in the range of 0-15.
-
-2. It will add the number to the offset of Array1. Now it has the memory location of a random element in Array1. It will store it's value in the AH register.
-
-3. It will copy the value of the chosen random element into the AL register.
-
-4. It will enter the value of the random element into the last empty element of array2.
-
-5. It will take the last element in Array1 and copy its value to the position (in Array1) where the random element is.
-
-6. It will print the random number to the console.
-
-7. It will add the value of the random element to the variable sum.
-
-8. Once it finish, it will shorten Array1 by one element and repeat steps 1-8 until only one element remains in Array1.
-
-> **Note:** I'm not actually shortening the array. Instead, I simply decrease by one the register that holds the length of the array, effectively ignoring all elements beyond the boundary.
-
+#### Afterwards, the program will perform the following steps:  
+  
+1. It will generate a random number in the range of 0-15.  
+  
+2. It will add the number to the offset of Array1. Now it has the memory location of a random element in Array1. It will store it's value in the AH register.  
+  
+3. It will copy the value of the chosen random element into the AL register.  
+  
+4. It will enter the value of the random element into the last empty element of array2.  
+  
+5. It will take the last element in Array1 and copy its value to the position (in Array1) where the random element is.  
+  
+6. It will print the random number to the console.  
+  
+7. It will add the value of the random element to the variable sum.  
+  
+8. Once it finish, it will shorten Array1 by one element and repeat steps 1-8 until only one element remains in Array1.  
+  
+> **Note:** I'm not actually shortening the array. Instead, I simply decrease by one the register that holds the length of the array, effectively ignoring all elements beyond the boundary.  
+  
+⠀ 
 ⠀
-⠀
-After the program finishes with Array2, it calculates the sum of Array1 using the formula for an arithmetic sequence with a first element of 1 and a common difference of 1, where the number of elements is k:
-
+After the program finishes with Array2, it calculates the sum of Array1 using the formula for an arithmetic sequence with a first element of 1 and a common difference of 1, where the number of elements is k:  
+  
 ```
 ( 2 * 1 + (k - 1) ) * 0.5k = ( ( k + 1 ) * k ) / 0.5
 ```
-
-Then the program subtracts the value of the variable "sum" from the calculated sum. The difference is the missing element, which the program prints.
-
+  
+Then the program subtracts the value of the variable "sum" from the calculated sum. The difference is the missing element, which the program prints.  
+  
 ```sh
 The missing number is: 
-```
+```  
 ⠀
-Next, the program checks whether the result is prime or composite and prints the conclusion.
-More details about the printing functions and the function that checks if a number is prime can be found below .
+Next, the program checks whether the result is prime or composite and prints the conclusion.  
+More details about the printing functions and the function that checks if a number is prime can be found below.  
 ⠀
 ⠀
 ## Run example
