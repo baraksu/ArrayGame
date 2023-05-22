@@ -15,8 +15,12 @@
 ## How does the algorithm work?  
   
 At first, the program, creates an array called Array1 with a length of k elements and an array called Array2 with a length of k-1 elements.  
+
 In the code I have provided, k=15, but in reality, the code works for any natural number where 1 < k < 20.  
-The first thing the code does is to define the Array1. The array will look like this:
+  
+The first thing the code does is to define the Array1.  
+  
+The array will look like this:
 ⠀
 |⠀ 1 ⠀|⠀ 2 ⠀| ⠀3 ⠀ |⠀4⠀|⠀5⠀|⠀...⠀|⠀k⠀|
 | - | - | - | - | - | - | - |  
