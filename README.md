@@ -15,6 +15,7 @@
 ⠀    
   
 ⠀
+
    
 ## `How does the algorithm work? ` 
 ⠀
@@ -95,6 +96,7 @@ More details about the printing functions and the function that checks if a numb
 ⠀    
   
 ⠀
+   
    
 ## `Run example`  
   
@@ -225,6 +227,7 @@ And it is a prime number!
 ⠀
  
  
+   
 ## `Variables`
 
 Here are all the variables in the code, their names, their values, and their goal in the code:
@@ -247,7 +250,8 @@ Here are all the variables in the code, their names, their values, and their goa
   
 ⠀
  
- 
+
+    
 ## `Procedures`
 
 
@@ -295,6 +299,7 @@ Here are all the procedures in the code, their parameters, their processes, and 
 
    
 ⠀
+   
 ## `Run images`  
 
   
@@ -379,7 +384,8 @@ And finally, here is an image that shows an example run for a different value of
 ⠀
    
 
-   
+  
+    
 ## `Personal experience`
 
   
