@@ -31,9 +31,8 @@
    
 * #####  [Run images](#run-images-1)
    
-* #####  [Personal experience](run-images-1)
-   
-* #####  [End](#bottom)
+* #####  [Personal experience](#personal-experience-1)
+  
 
 ⠀
 ⠀    
