@@ -50,8 +50,8 @@ The first thing the code does is to define the Array1.
 The array will look like this:
 
 ⠀
-|⠀ 1 ⠀|⠀ 2 ⠀| ⠀3 ⠀ |⠀4⠀|⠀5⠀|⠀...⠀|⠀k⠀|
-| - | - | - | - | - | - | - | 
+|1|2|3|4|5|⠀...⠀|k|
+| :-----: |  :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 
 
 
