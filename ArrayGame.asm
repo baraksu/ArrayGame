@@ -64,7 +64,7 @@ Start:
 	lea dx, arrMsg
 	int 21h
 	pop dx
-    	pop ax	
+    pop ax	
     
 	
 	
@@ -88,74 +88,11 @@ Start:
 	
 	mov cl, k
 	dec cl
-	setArray2: 
-		
-		
-	    ; Chooses a random number from array1.
-	    ranNum: 
-            call Random
-
-            ; This condition makes sure that the value is be greater then the current array size.
-            cmp dx, cx
-            jge ranNum
-        
-        
-		
-        ; This moves the chosen random number into al and saves it's index at ah.
-        mov bx, offset array1
-        add bx, dx
-        mov al, [bx]
-        mov ah, bl
-        
-		
-		
-        ; This moves the last element of the array into the place we just took the number from.
-        sub bx, dx  
-        add bx, cx 
-        mov dl ,[bx]
-        mov bh, 0
-        mov bl, ah
-        mov [bx], dl
-        
-		
-		
-        ; This puts the taken random number and puts it in the last empty element of the array2.
-        mov bx, offset array2
-        add bx, cx
-        sub bx, 1
-        mov [bx], al
-        
-		
-		
-        ; Prints the number we have moved into array2.
-        mov ah, 0
-        push ax
-        call PrintNumber
-        
-		
-    
-        ; Prints ", " (unless it is the last element).
-        cmp cx, 1
-        je dontP
-        push ax
-        push dx
-        mov ah, 09h
-        lea dx, eleMsg
-        int 21h
-        pop dx
-        pop ax 
-        
-		
-		
-        dontP:
-            ; The last thing we do is to add the element we have moved into array2, into SUM;
-            add [sum], ax
-        
-		
-		
-        loop setArray2
-        
-		
+	push offset array1
+	push offset array2
+	call SetArray2Func
+	
+	
 		
     ; This calculates the sum of array1 using the formula (2*1+(k-1))*0.5k
     mov cl, k
@@ -393,6 +330,94 @@ proc IsPrime
 	ret 2      
     
 endp IsPrime	
+          
+       
+       
+; SetArray2Func:
+; Input: The offset of the variables array1 and array2.
+; Proccess: The procedure sets the values of array2.
+; Output: The elements of array2.           
+
+proc SetArray2Func            
+        
+        
+    push bp
+    mov bp, sp          
+             
+             
+   setArray2: 
+		
+		
+	    ; Chooses a random number from array1.
+	    ranNum: 
+            call Random
+
+            ; This condition makes sure that the value is be greater then the current array size.
+            cmp dx, cx
+            jge ranNum
+        
+        
+		
+        ; This moves the chosen random number into al and saves it's index at ah.
+        mov bx, [bp+6]
+        add bx, dx
+        mov al, [bx]
+        mov ah, bl
+        
+		
+		
+        ; This moves the last element of the array into the place we just took the number from.
+        sub bx, dx  
+        add bx, cx 
+        mov dl ,[bx]
+        mov bh, 0
+        mov bl, ah
+        mov [bx], dl
+        
+		
+		
+        ; This puts the taken random number and puts it in the last empty element of the array2.
+        mov bx, [bp+4]
+        add bx, cx
+        sub bx, 1
+        mov [bx], al
+        
+		
+		
+        ; Prints the number we have moved into array2.
+        mov ah, 0
+        push ax
+        call PrintNumber
+        
+		
+    
+        ; Prints ", " (unless it is the last element).
+        cmp cx, 1
+        je dontP
+        push ax
+        push dx
+        mov ah, 09h
+        lea dx, eleMsg
+        int 21h
+        pop dx
+        pop ax 
+        
+		
+		
+        dontP:
+            ; The last thing we do is to add the element we have moved into array2, into SUM;
+            add [sum], ax
+        
+		
+		
+        loop setArray2
+           
+           
+        pop bp
+        ret 4 
+           
+
+endp SetArray2Func
 
 
 
